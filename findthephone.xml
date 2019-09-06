@@ -1,0 +1,1241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <project>
+    <projname>Find_the_phone</projname>
+    <welcome>Your friend Matt has asked you to help him get his cell phone back. The deans took it away from him, but he wants your help to steal it back. Search the school to find the necessary tools to enter the deans office, find his phone, and return it to him.</welcome>
+    <author>Erik Wathier</author>
+    <version>v1.0</version>
+    <output>findthephone</output>
+    <preps>
+      <prep>in</prep>
+      <prep>on</prep>
+      <prep>at</prep>
+      <prep>under</prep>
+      <prep>into</prep>
+      <prep>inside</prep>
+      <prep>through</prep>
+      <prep>out</prep>
+      <prep>behind</prep>
+      <prep>off</prep>
+      <prep>up</prep>
+      <prep>with</prep>
+      <prep>to</prep>
+      <prep>off</prep>
+      <prep>north</prep>
+      <prep>south</prep>
+      <prep>east</prep>
+      <prep>west</prep>
+      <prep>northeast</prep>
+      <prep>southeast</prep>
+      <prep>northwest</prep>
+      <prep>southwest</prep>
+      <prep>up</prep>
+      <prep>down</prep>
+      <prep>about</prep>
+      <prep>over</prep>
+      <prep>across</prep>
+    </preps>
+    <verbs>
+      <builtinverbs>
+        <verb>n,go north,north</verb>
+        <verb>s,go south,south</verb>
+        <verb>e,go east,east</verb>
+        <verb>w,go west,west</verb>
+        <verb>ne,go northeast,northeast</verb>
+        <verb>se,go southeast,southeast</verb>
+        <verb>sw,go southwest,southwest</verb>
+        <verb>nw,go northwest,northwest</verb>
+        <verb>up,go up,u</verb>
+        <verb>down,go down,d</verb>
+        <verb>enter,go in,go inside,get in</verb>
+        <verb>out</verb>
+        <verb>go</verb>
+        <verb>get,take,grab,pick up</verb>
+        <verb>give</verb>
+        <verb>inventory,i</verb>
+        <verb>kill,attack</verb>
+        <verb>drop</verb>
+        <verb>light</verb>
+        <verb>look,l</verb>
+        <verb>examine,x,look at,inspect</verb>
+        <verb>look in</verb>
+        <verb>search</verb>
+        <verb>open</verb>
+        <verb>lock</verb>
+        <verb>unlock</verb>
+        <verb>close,shut</verb>
+        <verb>eat</verb>
+        <verb>drink</verb>
+        <verb>put,place</verb>
+        <verb>quit</verb>
+        <verb>smell,sniff</verb>
+        <verb>listen</verb>
+        <verb>wait</verb>
+        <verb>climb</verb>
+        <verb>yell,scream,shout</verb>
+        <verb>jump</verb>
+        <verb>talk to</verb>
+        <verb>turn on</verb>
+        <verb>turn off</verb>
+        <verb>wear</verb>
+        <verb>save</verb>
+        <verb>restore</verb>
+        <verb>push,press</verb>
+        <verb>read</verb>
+        <verb>use</verb>
+        <verb>again</verb>
+      </builtinverbs>
+      <userverbs>
+        <verb>show</verb>
+        <verb>ask</verb>
+        <verb>pour</verb>
+        <verb>32602</verb>
+        <verb>help</verb>
+        <verb>sit down</verb>
+        <verb>stand up</verb>
+        <verb>lay down</verb>
+        <verb>fill</verb>
+        <verb>fill up</verb>
+        <verb>dribble,bounce</verb>
+      </userverbs>
+    </verbs>
+    <objects>
+      <object id="0" holder="0" name="Offscreen" printedname="Offscreen">
+        <description>OFFSCREEn</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" portable="0" container="0" supporter="0" transparent="0" openable="0" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms names="" />
+        <nogo>
+          <s />
+          <w />
+          <ne />
+          <nw />
+          <e />
+          <se />
+          <sw />
+          <n />
+          <up />
+          <down />
+        </nogo>
+        <backdrop />
+      </object>
+      <object id="1" holder="2" name="player" printedname="player">
+        <description>Who are you? You're you.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" portable="0" container="0" supporter="0" transparent="0" openable="0" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms names="me,self" />
+        <nogo />
+        <backdrop />
+      </object>
+      <object id="2" holder="0" name="Student_Entrance" printedname="Student Entrance">
+        <description>The school parking lot sits to the west, while the doorway to enter the school is to the east.</description>
+        <initialdescription>(NOTE: type 'help' if you get stuck at any point)</initialdescription>
+        <directions n="255" s="255" e="5" w="46" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags portable="0" emittinglight="1" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="3" holder="0" name="Early_B_Hallway" printedname="Early B Hallway">
+        <description>Doors to classrooms fill the sides the sides of the hallway. South of this hallway is the cafateria. The B hallway continues to the east. West is the security station.</description>
+        <initialdescription />
+        <directions n="255" s="8" e="7" w="5" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" emittinglight="1" locked="1" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="4" holder="0" name="End_B_Hallway" printedname="End B Hallway">
+        <description>To the north is the D hallway, where the pool and gym are. To the south is the C hallway, where the school administration offices are. To the west is the B hallway.</description>
+        <initialdescription />
+        <directions n="10" s="9" e="255" w="7" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" emittinglight="1" locked="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="5" holder="0" name="Security" printedname="Security">
+        <description>This is the security center between the student entrance and the school. To the east is the B hallway. A guard stands watch, who checks your ID when you enter.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="3" w="2" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" emittinglight="1" locked="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="6" holder="7" name="fountain" printedname="fountain">
+        <description>A water fountain. If you're thirsty, drink some water.</description>
+        <initialdescription>There is a water fountain along the south wall.</initialdescription>
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" container="0" emittinglight="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="7" holder="0" name="Mid_B_Hallway" printedname="Mid B Hallway">
+        <description>Halfway down the hallway, you spot a water fountain on the south side of the hall. To the north is the room where announcements are given over the intercom.</description>
+        <initialdescription />
+        <directions n="14" s="255" e="4" w="3" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" emittinglight="1" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="8" holder="0" name="Cafeteria" printedname="Cafeteria">
+        <description>In the cafeteria, some guys are sitting at a table talking. You recognize one of these guys; your friend Liam. Other than them, the cafeteria seems fairly empty.</description>
+        <initialdescription />
+        <directions n="3" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags emittinglight="1" locked="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="9" holder="0" name="C_hallway" printedname="C hallway">
+        <description>Most administrative offices are in the south end of this hall. Additionally, trophies and awards line the hallway, most of which are from atheltic events. To the north is a hallway intersection.</description>
+        <initialdescription />
+        <directions n="4" s="13" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" emittinglight="1" locked="0" lockable="0" door="0" />
+        <synonyms names="" />
+        <nogo>
+          <s />
+          <w />
+          <ne />
+          <nw />
+          <e />
+          <se />
+          <sw />
+          <n />
+          <up />
+          <down />
+        </nogo>
+      </object>
+      <object id="10" holder="0" name="D_Hallway" printedname="D Hallway">
+        <description>The D hallway consists of the pool to the north, and the gym to the east. To the south is the intersection of several hallways.</description>
+        <initialdescription />
+        <directions n="11" s="4" e="12" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" openable="0" emittinglight="1" locked="0" lockable="0" door="0" />
+        <synonyms names="" />
+        <nogo>
+          <s />
+          <w />
+          <ne />
+          <nw />
+          <e />
+          <se />
+          <sw />
+          <n />
+          <up />
+          <down />
+        </nogo>
+      </object>
+      <object id="11" holder="0" name="Pool11" printedname="Pool">
+        <description>The pool is fairly empty; there is no swimming practice after school today. Students and teacher alike are welcome here after school. To the south is the rest of the hallway.</description>
+        <initialdescription>Some pool supplies are also sitting around, including some other unusual items.</initialdescription>
+        <directions n="255" s="10" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" container="0" openable="0" emittinglight="1" locked="0" lockable="0" door="0" />
+        <synonyms names="" />
+        <nogo>
+          <s />
+          <w />
+          <ne />
+          <nw />
+          <e />
+          <se />
+          <sw />
+          <n />
+          <up />
+          <down />
+        </nogo>
+      </object>
+      <object id="12" holder="0" name="Gym" printedname="Gym">
+        <description>On one end of the gym, there's an open court with a basketball lying around. You don't see anyone you know well here.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="10" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags emittinglight="1" />
+        <synonyms names="ball" />
+        <nogo />
+      </object>
+      <object id="13" holder="9" name="Door" printedname="Door">
+        <description>The door to the dean's office. To the north is the rest of the C hallway.</description>
+        <initialdescription />
+        <directions n="9" s="15" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" openable="1" emittinglight="0" locked="1" lockable="1" door="1" />
+        <synonyms names="" />
+        <nogo>
+          <s />
+          <w />
+          <ne />
+          <nw />
+          <e />
+          <se />
+          <sw />
+          <n />
+          <up />
+          <down />
+        </nogo>
+      </object>
+      <object id="14" holder="0" name="Intercom_room" printedname="Intercom room">
+        <description>Inside the intercom room is Jason. Jason is currently monitoring the intercom, and is in charge of making announcements after school today. To the south is the B hallway.</description>
+        <initialdescription />
+        <directions n="255" s="7" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" openable="0" emittinglight="1" locked="0" lockable="0" door="0" />
+        <synonyms names="" />
+        <nogo>
+          <s />
+          <w />
+          <ne />
+          <nw />
+          <e />
+          <se />
+          <sw />
+          <n />
+          <up />
+          <down />
+        </nogo>
+      </object>
+      <object id="15" holder="0" name="Deans_office" printedname="Deans office">
+        <description>Inside the room, you see the dean's desk. The desk is messy and covered with papers, but you don't see a phone on the desk. However, the desk has several drawers.</description>
+        <initialdescription />
+        <directions n="13" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" emittinglight="1" locked="1" lockable="0" door="0" />
+        <synonyms names="" />
+        <nogo>
+          <s />
+          <w />
+          <ne />
+          <nw />
+          <e />
+          <se />
+          <sw />
+          <n />
+          <up />
+          <down />
+        </nogo>
+      </object>
+      <object id="16" holder="3" name="deans_plaque" printedname="deans plaque">
+        <description>The plaque lists the accomplisments of Dean Jackson. Graduated in the top 2% of this very high school 20 years ago. He was a star swimmer here as well, and continues to pursue swimming in the school pool most days afer school.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" emittinglight="0" locked="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="17" holder="5" name="guard" printedname="guard">
+        <description>This guard's job is to verify that students have their ID in order to enter the hallway. Don't try anything silly; this guard is good at his job.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" portable="0" container="0" emittinglight="0" locked="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="18" holder="7" name="water" printedname="water">
+        <description>Liquid H2O. Don't drink too much, it might lead to some unexpected consquences.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" container="0" emittinglight="0" user1="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="19" holder="20" name="deans_ID" printedname="deans ID">
+        <description>The dean's ID. On it is a picutre of Dean Jackson, and a magnetic strip for card readers.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" emittinglight="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="20" holder="8" name="liam" printedname="liam">
+        <description>Liam, your friend. Your friend matt wanted Liam to hold onto the Dean's ID to give it to you.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" container="0" emittinglight="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="21" holder="7" name="plaque" printedname="plaque">
+        <description>The plaque reads: 'Mr. Jackson: Dean, Swimmer, Student. From his beginnings as a student here, Dean Jackson has set many swimming records. To this day, Dean Jackson can regularly be found swimming in the pool after school.'</description>
+        <initialdescription>There is a plaque on the wall with the picture of a dean you recognize.</initialdescription>
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" emittinglight="0" locked="0" />
+        <synonyms names="picture,wall" />
+        <nogo />
+      </object>
+      <object id="22" holder="0" name="bottle" printedname="bottle">
+        <description>Liam's water bottle. He wants you to fill it up for him.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" portable="1" />
+        <synonyms names="water bottle" />
+        <nogo />
+      </object>
+      <object id="23" holder="11" name="dean" printedname="dean">
+        <description>Dean Jackson. A tall, brown haired man who has a passion for swimming.</description>
+        <initialdescription>A familiar dean is currently swimming in the pool. Beside the pool are his belongings (stuff).</initialdescription>
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" container="0" emittinglight="0" locked="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="24" holder="3" name="classrooms" printedname="classrooms">
+        <description>It's a school. There are classrooms everywhere.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" emittinglight="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="25" holder="14" name="jason" printedname="jason">
+        <description>Your friend, Jason, who handles after school announcements on the intercom.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" portable="0" container="0" openable="0" emittinglight="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="26" holder="14" name="intercom" printedname="intercom">
+        <description>It's an intercom. Jason probably knows how to use it.</description>
+        <initialdescription>There's an intercom sitting on the desk.</initialdescription>
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" container="0" openable="0" emittinglight="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="27" holder="12" name="students" printedname="students">
+        <description>You recognize these students as members of the school's varsity basketball team. It would be best to not interrupt their practice; they have a big game tomorrow night.</description>
+        <initialdescription>There are some students playing basketball in the gym.</initialdescription>
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" container="0" emittinglight="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="28" holder="15" name="random_phone" printedname="random phone">
+        <description>You notice nothing unexpected.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" portable="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="29" holder="45" name="mphone" printedname="matt's phone">
+        <description>Matt's phone. Bring it to him! He's in the parking lot waiting.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" portable="1" container="0" openable="0" emittinglight="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="30" holder="15" name="list" printedname="list">
+        <description>You notice nothing unexpected.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" portable="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="31" holder="0" name="fhf" printedname="fhf">
+        <description>It's a light switch on the wall of the deans room. Chances are, it can be used to turn on and off the light in the room.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" portable="0" emittinglight="0" />
+        <synonyms names="" />
+        <nogo />
+      </object>
+      <object id="32" holder="1" name="student_id" printedname="student id">
+        <description>This is your student ID.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" portable="1" container="0" supporter="0" transparent="0" openable="0" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms />
+        <nogo />
+        <backdrop />
+      </object>
+      <object id="33" holder="8" name="table" printedname="table">
+        <description>It's a table. The table has seen better days. Your friends are sitting around it eating a snack.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" portable="0" container="0" supporter="0" transparent="0" openable="0" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms />
+        <nogo />
+        <backdrop />
+      </object>
+      <object id="34" holder="9" name="trophies" printedname="trophies">
+        <description>Your school has won a lot of awards, most of which are for athletic achievements. There are many first place trophies here.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" portable="0" container="0" supporter="0" transparent="0" openable="0" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms names="awards" />
+        <nogo />
+        <backdrop />
+      </object>
+      <object id="35" holder="11" name="deans_stuff" printedname="deans stuff">
+        <description>The dean's belongings appears to consist of a sweatshirt, a pair of jeans, some gum, and a laptop.</description>
+        <initialdescription>A pile of the dean's stuff lies on a chair.</initialdescription>
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" portable="0" container="0" supporter="0" transparent="0" openable="0" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms />
+        <nogo />
+        <backdrop />
+      </object>
+      <object id="36" holder="35" name="deans_key" printedname="deans key">
+        <description>It appears to be a key to the deans office.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" portable="1" container="0" supporter="0" transparent="0" openable="0" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms />
+        <nogo />
+        <backdrop />
+      </object>
+      <object id="37" holder="15" name="desk" printedname="desk">
+        <description>The dean's desk. Inside one of the drawers is probably Matt's phone. It has a top drawer, center drawer, middle drawer, and bottom drawer.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" portable="0" container="0" supporter="0" transparent="0" openable="0" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms />
+        <nogo />
+        <backdrop />
+      </object>
+      <object id="38" holder="15" name="top_drawer" printedname="top drawer">
+        <description>A desk drawer. Desk drawers are openable.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" portable="0" container="1" supporter="0" transparent="0" openable="1" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms />
+        <nogo />
+        <backdrop />
+      </object>
+      <object id="39" holder="15" name="center_drawer" printedname="center drawer">
+        <description>A desk drawer. Desk drawers are openable.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" portable="0" container="1" supporter="0" transparent="0" openable="1" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms />
+        <nogo />
+        <backdrop />
+      </object>
+      <object id="40" holder="11" name="swimming_pool" printedname="swimming pool">
+        <description>The swimming pool.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" portable="0" container="0" supporter="0" transparent="0" openable="0" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms names="pool" />
+        <nogo />
+        <backdrop />
+      </object>
+      <object id="41" holder="12" name="basketball" printedname="basketball">
+        <description>Stop thinking about playing basketball, you have a job to do!</description>
+        <initialdescription>There is a basketball sitting on the floor beside you.</initialdescription>
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" portable="0" container="0" supporter="0" transparent="0" openable="0" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms names="ball" />
+        <nogo />
+        <backdrop />
+      </object>
+      <object id="42" holder="0" name="unsearchable_stuff" printedname="unsearchable stuff">
+        <description>you should not be able to see this message, if you do its a bug and that means i have to fix a really complicated function so please dont see this msg</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" portable="0" container="1" supporter="0" transparent="0" openable="0" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms />
+        <nogo />
+        <backdrop />
+      </object>
+      <object id="43" holder="11" name="bleach" printedname="bleach">
+        <description>A bucket of bleach.</description>
+        <initialdescription>There's some cleaning supplies in the corner, but the only thing you recognize is some bleach.</initialdescription>
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" portable="1" container="0" supporter="0" transparent="0" openable="0" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms names="" />
+        <nogo />
+        <backdrop />
+      </object>
+      <object id="44" holder="15" name="middle_drawer" printedname="middle drawer">
+        <description>A desk drawer. Desk drawers are openable.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" portable="0" container="1" supporter="0" transparent="0" openable="1" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms />
+        <nogo />
+        <backdrop />
+      </object>
+      <object id="45" holder="15" name="bottom_drawer" printedname="bottom drawer">
+        <description>A desk drawer. Desk drawers are openable.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="1" portable="0" container="1" supporter="0" transparent="0" openable="1" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms />
+        <nogo />
+        <backdrop />
+      </object>
+      <object id="46" holder="0" name="Parking_Lot" printedname="Parking Lot">
+        <description>To the east is the entrance to the school.</description>
+        <initialdescription>Matt is in the school parking lot waiting for you to go retrieve his phone. If you manage to find his phone, you should probably come back here to return it to him.</initialdescription>
+        <directions n="255" s="255" e="2" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" portable="0" container="0" supporter="0" transparent="0" openable="0" open="0" _x0020_="0" wearable="0" emittinglight="1" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms />
+        <nogo />
+        <backdrop />
+      </object>
+      <object id="47" holder="46" name="matt" printedname="matt">
+        <description>Matt. Short for Matthew. Your close friend, who wants you to get his phone back for him.</description>
+        <initialdescription>Matt is in the school parking lot waiting for you to go retrieve his phone.</initialdescription>
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" portable="0" container="0" supporter="0" transparent="0" openable="0" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms />
+        <nogo>
+          <s />
+          <w />
+          <ne />
+          <nw />
+          <e />
+          <se />
+          <sw />
+          <n />
+          <up />
+          <down />
+        </nogo>
+        <backdrop />
+      </object>
+      <object id="48" holder="0" name="sitting" printedname="sitting">
+        <description>You're currently sitting on the floor.</description>
+        <initialdescription />
+        <directions n="255" s="255" e="255" w="255" ne="255" se="255" sw="255" nw="255" up="255" down="255" in="255" out="255" mass="0" />
+        <flags scenery="0" portable="0" container="0" supporter="0" transparent="0" openable="0" open="0" _x0020_="0" wearable="0" emittinglight="0" locked="0" lockable="0" beingworn="0" user1="0" door="0" user2="0" />
+        <synonyms names="lay down" />
+        <nogo>
+          <s>You need to stand up first.</s>
+          <w>You need to stand up first.</w>
+          <ne>You need to stand up first.</ne>
+          <nw>You need to stand up first.</nw>
+          <e>You need to stand up first.</e>
+          <se>You need to stand up first.</se>
+          <sw>You need to stand up first.</sw>
+          <n>You need to stand up first.</n>
+          <up>You need to stand up first.</up>
+          <down>You need to stand up first.</down>
+        </nogo>
+        <backdrop />
+      </object>
+    </objects>
+    <checks>
+      <check verb="n" check="check_move" />
+      <check verb="s" check="check_move" />
+      <check verb="e" check="check_move" />
+      <check verb="w" check="check_move" />
+      <check verb="u" check="check_move" />
+      <check verb="d" check="check_move" />
+      <check verb="ne" check="check_move" />
+      <check verb="nw" check="check_move" />
+      <check verb="se" check="check_move" />
+      <check verb="sw" check="check_move" />
+      <check verb="enter" check="check_move" />
+      <check verb="close" check="check_dobj_supplied" />
+      <check verb="drop" check="check_dobj_supplied" />
+      <check verb="drop" check="check_have_dobj" />
+      <check verb="eat" check="check_dobj_supplied" />
+      <check verb="eat" check="check_have_dobj" />
+      <check verb="enter" check="check_dobj_supplied" />
+      <check verb="enter" check="check_see_dobj" />
+      <check verb="examine" check="check_dobj_supplied" />
+      <check verb="examine" check="check_see_dobj" />
+      <check verb="get" check="check_dobj_supplied" />
+      <check verb="get" check="check_see_dobj" />
+      <check verb="get" check="check_dont_have_dobj" />
+      <check verb="get" check="check_dobj_portable" />
+      <check verb="kill" check="check_dobj_supplied" />
+      <check verb="kill" check="check_see_dobj" />
+      <check verb="light" check="check_dobj_supplied" />
+      <check verb="light" check="check_have_dobj" />
+      <check verb="light" check="check_see_dobj" />
+      <check verb="open" check="check_dobj_supplied" />
+      <check verb="open" check="check_see_dobj" />
+      <check verb="open" check="check_dobj_opnable" />
+      <check verb="open" check="check_dobj_unlocked" />
+      <check verb="put" check="check_dobj_supplied" />
+      <check verb="put" check="check_prep_supplied" />
+      <check verb="put" check="check_iobj_supplied" />
+      <check verb="put" check="check_not_self_or_child" />
+      <check verb="put" check="check_have_dobj" />
+      <check verb="put" check="check_see_iobj" />
+      <check verb="put" check="check_put" />
+      <check verb="talk to" check="check_dobj_supplied" />
+      <check verb="talk to" check="check_see_dobj" />
+      <check verb="turn on" check="check_dobj_supplied" />
+      <check verb="turn on" check="check_see_dobj" />
+      <check verb="lock" check="check_dobj_supplied" />
+      <check verb="lock" check="check_see_dobj" />
+      <check verb="lock" check="check_dobj_lockable" />
+      <check verb="unlock" check="check_dobj_supplied" />
+      <check verb="unlock" check="check_see_dobj" />
+      <check verb="unlock" check="check_dobj_lockable" />
+      <check verb="look in" check="check_dobj_supplied" />
+      <check verb="look in" check="check_see_dobj" />
+      <check verb="wear" check="check_see_dobj" />
+      <check verb="use" check="check_see_dobj" />
+      <check verb="wear" check="check_have_dobj" />
+      <check verb="wear" check="check_dobj_wearable" />
+      <check verb="give" check="check_dobj_supplied" />
+      <check verb="give" check="check_have_dobj" />
+      <check verb="give" check="check_iobj_supplied" />
+      <check verb="give" check="check_see_iobj" />
+      <check verb="wear" check="check_dobj_wearable" />
+      <check verb="show" check="check_have_dobj" />
+      <check verb="drink" check="check_see_dobj" />
+    </checks>
+    <sentences>
+      <sentence verb="examine" do="*" prep="" io="" type="before" sub="get_portable" />
+      <sentence verb="take" do="PLAYER" prep="" io="" type="instead" sub="not_possible" />
+      <sentence verb="kill" do="PLAYER" prep="" io="" type="instead" sub="kill_self" />
+      <sentence verb="kill" do="*" prep="" io="" type="instead" sub="default_kill" />
+      <sentence verb="kill" do="*" prep="with" io="*" type="instead" sub="default_kill" />
+      <sentence verb="talk to" do="PLAYER" prep="" io="" type="instead" sub="talk_to_self" />
+      <sentence verb="talk to" do="*" prep="" io="" type="instead" sub="default_talk" />
+      <sentence verb="listen" do="" prep="" io="" type="instead" sub="listen" />
+      <sentence verb="smell" do="" prep="" io="" type="instead" sub="smell" />
+      <sentence verb="wait" do="" prep="" io="" type="instead" sub="wait" />
+      <sentence verb="yell" do="" prep="" io="" type="instead" sub="yell" />
+      <sentence verb="jump" do="" prep="" io="" type="instead" sub="jump" />
+      <sentence verb="eat" do="*" prep="" io="" type="instead" sub="default_eat" />
+      <sentence verb="drink" do="*" prep="" io="" type="instead" sub="default_drink" />
+      <sentence verb="wear" do="*" prep="" io="" type="before" sub="get_portable" />
+      <sentence verb="e" do="" prep="" io="" type="instead" sub="go_east" />
+      <sentence verb="ask" do="*" prep="" io="" type="instead" sub="default_ask" />
+      <sentence verb="talk to" do="liam" prep="" io="" type="instead" sub="ask_for_id" />
+      <sentence verb="use" do="intercom" prep="" io="" type="instead" sub="move_dean" />
+      <sentence verb="search" do="deans_stuff" prep="" io="" type="instead" sub="search_stuff" />
+      <sentence verb="unlock" do="Door" prep="" io="" type="instead" sub="unlock_door" />
+      <sentence verb="open" do="bottom_drawer" prep="" io="" type="instead" sub="bottom_drawer" />
+      <sentence verb="open" do="top_drawer" prep="" io="" type="instead" sub="top_drawer" />
+      <sentence verb="open" do="center_drawer" prep="" io="" type="instead" sub="center_drawer" />
+      <sentence verb="open" do="middle_drawer" prep="" io="" type="instead" sub="middle_drawer" />
+      <sentence verb="drink" do="water" prep="" io="" type="instead" sub="drink_water" />
+      <sentence verb="32602" do="" prep="" io="" type="instead" sub="m32602" />
+      <sentence verb="help" do="" prep="" io="" type="instead" sub="help" />
+      <sentence verb="pour" do="bleach" prep="in" io="swimming_pool" type="instead" sub="bleach_test" />
+      <sentence verb="sit down" do="" prep="" io="" type="instead" sub="sit_down" />
+      <sentence verb="stand up" do="" prep="" io="" type="instead" sub="stand_up" />
+      <sentence verb="fill" do="bottle" prep="" io="" type="instead" sub="fill_water" />
+      <sentence verb="fill up" do="bottle" prep="" io="" type="instead" sub="fill_water" />
+      <sentence verb="dribble" do="basketball" prep="" io="" type="instead" sub="ball" />
+    </sentences>
+    <routines>
+      <routine name="not_possible">if (dobj == player) { println("Not physically possible.");  } </routine>
+      <routine name="get_portable">if (dobj.portable == 1) { if (dobj.holder != player) { println("(Taken)"); dobj.holder = player;}  } </routine>
+      <routine name="kill_self">if ( kill_self ==0)
+{
+          println("Please don't do that.");
+          kill_self++;
+}
+
+else if ( kill_self ==1)
+{
+          println("Upon further considering the possibility of death, you remember how much you have to live for.");
+          kill_self++;
+}
+
+else if ( kill_self ==2)
+{
+     println("The prospect of death intrigues you to a point of overwhelming desire, and you suddenly decide to stop breathing.");
+     println("...");
+     println("...");
+     println("Suddenly, you start breathing again.");
+     kill_self++;
+}
+
+else if  (kill_self==3)
+{
+     println("You have died.");
+player.holder=2;
+println("");
+look();
+
+
+}
+
+</routine>
+      <routine name="default_kill">println("Kill them? With what? Your bare hands? No.");</routine>
+      <routine name="kill_player">println("You have died.");
+player.holder=2;
+println("");
+look();
+</routine>
+      <routine name="talk_to_self">println("You failed to start an interesting conversation with yourself.");</routine>
+      <routine name="default_talk">println("Your medicore social skills prohibit you from starting a conversation with that.");</routine>
+      <routine name="listen">println("...");</routine>
+      <routine name="smell">println("*sniff*");</routine>
+      <routine name="wait">println("What are you waiting for?");</routine>
+      <routine name="yell">println("Don't yell in a school, people might get the wrong idea.");</routine>
+      <routine name="jump">println("You jumped up. Then fell down. That's gravity.");</routine>
+      <routine name="default_eat">println("That's not part of a healthy diet.");</routine>
+      <routine name="default_drink">println("You can't drink that.");</routine>
+      <routine name="go_east">if ( player.holder == Security )
+{
+     if ( student_id.holder == player )
+     {
+                    println("You show your ID to the security guard, who waves you through.");
+                    println(" ");
+                    move();
+     }
+     else 
+     {
+                    println("The guard won't let you through unless you have your student ID.");
+     }
+
+
+}
+else 
+{
+     move();
+}
+
+</routine>
+      <routine name="go_south">if ( player.holder == door )
+{
+     if ( deans_id.holder == player )
+     {
+                    println("You scanned the When both id and key are used on the door, it will open.");
+                    move();
+     }
+     else 
+     {
+                    println("You don't have the dean's ID. The door won't open without both the dean's ID and a physical key.");
+     }
+
+
+}
+else 
+{
+     move();
+}
+</routine>
+      <routine name="default_ask">println("Why are you asking that for something? It has nothing to give you...");</routine>
+      <routine name="ask_for_id">if ( deans_id.holder == liam &amp;&amp; filled == 0 )
+{
+     println("You ask liam for the Dean's ID that Matt tasked him with collecting. He says he wont give it to until you go fill up his water bottle for him.");
+     println("Liam gives you his water bottle.");
+bottle.holder = player;
+}
+
+else if (deans_id.holder == liam &amp;&amp; filled == 1)
+{
+     println("You give Liam his water bottle that you so kindly filled up for him. In return, he gives you the Dean's ID.");
+     deans_id.holder = player;
+     bottle.holder = Offscreen;
+}
+else
+{
+     println("Liam is eating.");
+}</routine>
+      <routine name="search_unsearch">println("You can't do that while the dean is here.");</routine>
+      <routine name="search_stuff">if  (player.holder != dean.holder)
+{
+      if (deans_key.holder == deans_stuff)
+      {
+      	print("You search the Dean's belongings and got the key.");
+      
+      	deans_key.holder = player; //move item to player
+
+      }
+      else
+      {
+      	println("You already searched the dean's belongings and got the key.");
+      }
+}
+else
+{
+     println("You can't do that while the dean is here.");
+}</routine>
+      <routine name="move_dean">if ( pool_visits ==1)
+{
+     if (dean.holder != offscreen)
+     {
+          println("Jason approaches the microphone. His voice booms over the PA system ''Please evacuate the pool and wait in your respective locker room while mandatory cleaning is performed.''");
+          dean.holder = offscreen;
+     }
+     else
+     {
+          println("You already used the intercom to get the dean out of the pool.");
+     }
+}
+else 
+{
+     println("What? Why would you need to use the intercom?");
+}
+</routine>
+      <routine name="unlock_door">if (deans_key.holder == player &amp;&amp; deans_id.holder == player)
+{
+	println("The deans door is now unlocked. The deans office is on the south side of the door, while the rest of the hallway is north.");
+	door.open = 1;
+	door.locked = 0;
+}
+else
+{
+	println("Administrative offices have 2 layers of security. They all require an ID and key in order to unlock. Attempting to unlock the door without both of these will get you nowhere.");
+}
+</routine>
+      <routine name="bleach_test">if (bleach.holder == player &amp;&amp; b_tries == 0)
+      {
+      	println("You consider an alternate way to get the dean out of the pool: dumping bleach in it. However, this thought quickly escapes your mind because you realize how immoral of a thing that would be.");
+                     b_tries = 1;
+}
+
+else if (bleach.holder == player &amp;&amp; b_tries == 1)
+      {
+      	println("The evil grows inside you. As you approach the pool with the bucket of bleach in your hands, you envision the chaos this would cause. Is it really worth throwing away your future just to ensure the dean never finds out you stole back Matt's phone?");
+                     b_tries = 2;
+}
+
+else if (bleach.holder == player &amp;&amp; b_tries == 2)
+      {
+      	println("Standing next to the pool, you prepare to commit an act of unspeakable evil. You know that you'll never recover from what you're about to do. The permanent trauma of killing a innocent dean just to get your friends phone back will haunt you forever.");
+                     b_tries = 3;
+}
+
+else if (bleach.holder == player &amp;&amp; b_tries == 3)
+      {
+      	println("This is your last chance to turn back. Don't do this. There is a better ending.");
+                     b_tries = 4;
+}
+
+
+else if (bleach.holder == player &amp;&amp; b_tries == 4)
+      {
+      	println("You dump the bleach in the pool. Before the dean can realize what your doing, he screams in agony. His skin burns, and he dies screaming. Horrified by what you've done, you fall to the ground and vomit.");
+      	println(" ");
+      	println("The deans belongings still lie in the room near the pool. You've come too far to turn back now. What will you tell Dean Jackson's family you monster?");
+                     b_tries = 5;
+                     
+}
+else if (bleach.holder == player &amp;&amp; b_tries == 5)
+{
+                	println("The deans belongings still lie in the room near the pool. You've come too far to turn back now. What will you tell Dean Jackson's family you monster?");
+}
+
+else if (bleach.holder != player)
+{
+     println("You don't have the bleach.");
+}
+
+else if (dean.holder != player.holder)
+{
+     println("There's no reason to do that, you already used the intercom to get the dean out of the pool.");
+}</routine>
+      <routine name="bottom_drawer">if  (player != mphone.holder)
+{
+
+      	println("Opening the bottom desk drawer reveals matts phone. You take it and put it in your pocket.");
+      	mphone.holder = player; 
+                     mphone.scenery = 0;
+                    dean_enter = 7;
+
+}
+else
+{
+      	println("You already found the phone. Meet Matt in the school parking lot.");
+}
+</routine>
+      <routine name="top_drawer">if  (player.holder != mphone.holder)
+{
+
+      	print("Opening the top desk drawer reveals... nothing. It's completely empty.");
+
+
+}
+else
+{
+      	println("You already found the phone. Meet Matt in the school parking lot.");
+}
+</routine>
+      <routine name="middle_drawer">if  (player.holder != mphone.holder)
+{
+
+      	print("Opening the middle desk drawer reveals... a lot of papers. Along with pens and pencils. There doesn't appear to be anything of importance in here.");
+
+
+}
+else
+{
+      	println("You already found the phone. Meet Matt in the school parking lot.");
+}
+</routine>
+      <routine name="center_drawer">if  (player.holder != mphone.holder)
+{
+
+      	print("Opening the center desk drawer reveals... a few pens, post its, and family pictures. There doesn't appear to be anything of importance in here.");
+
+
+}
+else
+{
+      	println("You already found the phone. Meet Matt in the school parking lot.");
+}
+</routine>
+      <routine name="drink_water">if ( water_drinks ==0)
+{
+     if (player.holder == Mid_B_Hallway)
+     {
+          println("You drank some water. How refreshing.");
+          water_drinks=1;
+     }
+}
+
+
+else if ( water_drinks ==1)
+{
+     if (player.holder == Mid_B_Hallway)
+     {
+          println("You drank some more water. That's enough water.");
+          water_drinks=2;
+     }
+}
+
+
+else if ( water_drinks ==2)
+{
+     if (player.holder == Mid_B_Hallway)
+     {
+          println("You drank some more water. You're starting to feel a little sick from drinking so much.");
+          water_drinks=3;
+     }
+}
+
+
+else if ( water_drinks ==3)
+{
+     if (player.holder == Mid_B_Hallway)
+     {
+          println("You drank even more water. You could barely manage to gulp it down");
+          water_drinks=4;
+     }
+}
+
+
+else if ( water_drinks ==4)
+{
+     if (player.holder == Mid_B_Hallway)
+     {
+          println("Before you could let another drop of water enter your mouth, you rushed to the bathroom. Upon returning to the fountain, you regret drinking so much water.");
+          water_drinks=5;
+     }
+}
+
+
+else if ( water_drinks ==5)
+     {
+          println("Stop. Drinking. Water. This is your final warning.");
+          water_drinks=6;
+     }
+
+else if ( water_drinks ==6)
+{
+     println("You died from overhydration. What a way to go.");
+
+     player.holder=2;
+     println("");
+     println("");
+     look();
+}
+
+
+
+</routine>
+      <routine name="m32602">println("");
+println("");
+println("You won. Somehow.");
+player.holder=2;
+println("");
+println("");
+println("Ending 3/3 - The Dirty Hacker Ending");</routine>
+      <routine name="help">println("Did you get past the security center?");
+ask();
+if ( answer == "Y" || answer == "Yes" )
+{
+     println("Have you seen Liam?");
+     ask();
+       if ( answer == "Y" || answer == "Yes" )
+     {        
+          println("Have you encountered Dean Jackson?");
+          ask();
+            if ( answer == "Y" || answer == "Yes" )
+          {
+               println("Did you make Dean Jackson leave the pool?");
+                  ask();
+                   if ( answer == "Y" || answer == "Yes" )
+                {
+                      println("Do you have BOTH the Dean's ID and key?");
+                        ask();
+                         if ( answer == "Y" || answer == "Yes" )
+                      {
+                           println("Have you enountered the desk?");
+                             ask();
+                              if ( answer == "Y" || answer == "Yes" )
+                         {
+                                println("Do you have Matt's phone in your inventory?");
+                                  ask();
+                                   if ( answer == "Y" || answer == "Yes" )
+                                   println("Matt is waiting for you in the parking lot.");
+                       }
+                       else 
+                       {
+                            println("Try opening each of the desk drawers.");          
+                       }
+
+                       }
+                       else 
+                       {
+                            println("The ID is in the southwest end of the school, and the key is in the northeast end of the school.");          
+                       }
+                }
+               else
+               {
+                         println("Use the intercom, or talk to Jason.");
+               }      
+     }
+     else 
+     {
+          println("Check rooms in the D hallway.");          
+     }                      
+ 
+     }
+     else 
+     {
+          println("Explore the early areas of the school and talk to Liam.");          
+     }
+
+}
+else 
+{
+     println("There is a guard there. As long as you have your school ID you can walk freely past him.");
+}
+
+
+</routine>
+      <routine name="jason_talk">if ( pool_visits ==1)
+{
+     if (dean.holder != offscreen)
+     {
+          println("Jason approaches the microphone. His voice booms over the PA system ''Please evacuate the pool and wait in your respective locker room while emergency cleaning is performed.''");
+          dean.holder = offscreen;
+     }
+     else
+     {
+          println("Jason reminds you that he already helped you get the dean out of the pool.");
+     }
+}
+else 
+{
+     println("After glancing at you, Jason goes back to looking at his phone.");
+}
+</routine>
+      <routine name="sit_down">println("You're feeling a little tired, so you sit down on the floor.");
+old_room = player.holder;
+player.holder = sitting;
+</routine>
+      <routine name="stand_up">if ( player.holder == sitting  )
+{
+println("You stand up. Back to work.");
+player.holder = old_room;
+}
+
+else 
+{
+     println("You're not sitting down.");
+}
+</routine>
+      <routine name="fill_water">if ( player.holder == water.holder &amp;&amp; filled == 0 &amp;&amp; player == bottle.holder)
+{
+     println("You fill up Liam's water bottle.");
+     filled = 1;
+}
+
+else if ( player.holder == water.holder &amp;&amp; filled == 1 &amp;&amp; player ==  bottle.holder)
+{
+     println("The bottle is already filled.");
+}
+</routine>
+      <routine name="ball">if(player.holder == basketball.holder)
+{
+     println("You dribble the basketball for a few seconds, then place it back on the ground.");
+}</routine>
+    </routines>
+    <events>
+      <event name="endgame">if (mphone.holder == player &amp;&amp; player.holder == Parking_Lot &amp;&amp; b_tries &lt; 4)
+{
+      println("");
+     println("");
+     println("As you walk into the parking lot, you see Matt sitting in his car waiting for you. Taking the phone out of your pocket and waving to him, he smiles.");
+     println("");
+     println("");
+     println("Ending 1/3 - The Happy Ending");
+}</event>
+      <event name="enter_pool">if ( player.holder == Pool11)
+{
+     pool_visits=1;
+}
+</event>
+      <event name="evil_end">if (mphone.holder == player &amp;&amp; player.holder == Parking_Lot &amp;&amp; b_tries &gt;= 4)
+
+{
+     println(" ");
+     println(" ");
+     println("As you approach the parking lot, you hear sirens approaching.");
+     println("You attempt to get to Matt's car, but it's too far. Security guards exit the school chasing after you, while the police enter the parking lot. Before you can make it halfway across the parking lot, you're cornered.");
+     println(" ");
+
+     println("Press enter to continue");
+     ask();
+     
+     println("There's no escape. Admitting defeat, you raise your hands. Without hesitation, the police taze you, quicking rendering you unconcious.");
+     println("As your thoughts fade into nothingness and the police drag you into a car, the realization of how badly you screwed up hits you.");
+     println(" ");
+     println(" ");
+     println("And you didn't even get to give Matt his phone. Truly, this is the worst possible ending.");
+     println(" ");
+     println(" ");
+     println(" ");
+     println("Ending 2/3 - The Murderous Ending");
+
+}</event>
+      <event name="scream">if( player.holder == Deans_office &amp;&amp; b_tries == 4 &amp;&amp; dean_enter == 7)
+{
+          println("You hear a scream in the distance. It sounds like it came from the north.");
+}</event>
+      <event name="move">if ( b_tries == 4)
+{
+dean.holder = offscreen;
+}</event>
+      <event name="office">if( player.holder == Deans_office)
+   {
+
+          dean_enter++;
+}</event>
+      <event name="prohibit">if (mphone.holder == player &amp;&amp; player.holder == End_B_Hallway &amp;&amp; b_tries &gt;= 4 &amp;&amp; dean_enter == 7)
+{
+      println("Police and administrators surround the entrance to the pool. Attempting to go that way now would result in your capture.");
+}</event>
+      <event name="pool_kill">if (mphone.holder == player &amp;&amp; player.holder == Pool11 &amp;&amp; b_tries &gt;= 4 &amp;&amp; dean_enter == 7)
+{
+      println("You only have time to look around for a second before you're tazed by the police. Your thoughts fade. You know, in your heart, that you could've gotten Matt his phone without murdering an innocent dean.");
+     println("GAME OVER");
+player.holder=2;
+}</event>
+    </events>
+    <variables>
+      <builtin>
+        <var name="dobj" addr="sentence+1" value="0" />
+        <var name="iobj" addr="sentence+3" value="0" />
+        <var name="score" addr="score" value="0" />
+        <var name="moves" addr="moves" value="0" />
+        <var name="health" addr="health" value="100" />
+        <var name="turnsWithoutLight" addr="turnsWithoutLight" value="0" />
+        <var name="gameOver" addr="gameOver" value="0" />
+        <var name="answer" addr="answer" value="0" />
+      </builtin>
+      <user>
+        <var name="pool_visits" addr="Lantern" value="0" />
+        <var name="water_drinks" addr="Lantern" value="0" />
+        <var name="kill_self" addr="Lantern" value="0" />
+        <var name="b_tries" addr="Lantern" value="0" />
+        <var name="old_room" addr="Lantern" value="0" />
+        <var name="dean_enter" addr="Lantern" value="0" />
+        <var name="laying" addr="Lantern" value="0" />
+        <var name="filled" addr="Lantern" value="0" />
+      </user>
+    </variables>
+    <walkthrough>e,e,s,talk to liam,n,e,fill up bottle,w,s,talk to liam,n,e,e,n,n,s,s,w,n,use intercom,s,e,e,n,n,search stuff,s,s,s,unlock door,s,open bottom drawer,n,n,w,w,w,w,w</walkthrough>
+  </project>
+</xml>
